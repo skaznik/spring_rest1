@@ -12,7 +12,7 @@ import spring2.spring2.Model.User;
 public class PiatyKontroler {
 
     @PostMapping
-    public User stworz(@RequestParam String imie,
+    public User stworz(@RequestParam String name,
                        @RequestParam String nazwisko,
                        @RequestParam int wiek) {
 

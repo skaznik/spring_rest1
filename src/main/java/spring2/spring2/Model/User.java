@@ -1,5 +1,6 @@
 package spring2.spring2.Model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -14,8 +15,12 @@ public class User {
         return uprawnienia;
     }
 
-    public void setUprawnienia(List<String> uprawnienia) {
-        this.uprawnienia = uprawnienia;
+    public void addUprawnienia(String uprawnienia) {
+        this.uprawnienia.add(uprawnienia);
+    }
+
+    public void removeUprawnienia(String uprawnienia) {
+        this.uprawnienia.remove(uprawnienia);
     }
 
     public String getName() {
@@ -40,5 +45,12 @@ public class User {
 
     public void setWiek(int wiek) {
         this.wiek = wiek;
+    }
+
+    public User(String name, String nazwisko, int wiek) {
+        this.name = name;
+        this.nazwisko = nazwisko;
+        this.wiek = wiek;
+        this.uprawnienia = new ArrayList<>();
     }
 }
