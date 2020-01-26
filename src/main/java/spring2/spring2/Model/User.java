@@ -8,7 +8,7 @@ public class User {
     private String nazwisko;
     private int wiek;
     private List<String> uprawnienia;
-    private User zona;
+
 
     public List<String> getUprawnienia() {
         return uprawnienia;
@@ -16,14 +16,6 @@ public class User {
 
     public void setUprawnienia(List<String> uprawnienia) {
         this.uprawnienia = uprawnienia;
-    }
-
-    public User getZona() {
-        return zona;
-    }
-
-    public void setZona(User zona) {
-        this.zona = zona;
     }
 
     public String getName() {
