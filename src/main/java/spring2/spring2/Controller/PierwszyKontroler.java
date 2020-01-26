@@ -12,9 +12,22 @@ import java.util.Calendar;
 public class PierwszyKontroler {
 
     @GetMapping("/dodaj/{a}/{b}")
-
     public int dodaj(@PathVariable int a, @PathVariable int b) {
         return a + b;
+    }
+    @GetMapping("/odejmij/{a}/{b}")
+    public int odejmij(@PathVariable int a, @PathVariable int b) {
+        return a - b;
+    }
+
+    @GetMapping("/mnoz/{a}/{b}")
+    public int mnoz(@PathVariable int a, @PathVariable int b) {
+        return a * b;
+    }
+
+    @GetMapping("/dziel/{a}/{b}")
+    public int dziel(@PathVariable int a, @PathVariable int b) {
+        return a / b;
     }
 
     @GetMapping("/dzienTygodnia/{rok}/{miesiac}/{dzien}")
