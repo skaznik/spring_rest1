@@ -10,6 +10,19 @@ import java.util.Calendar;
 @RestController
 public class DrugiKontroler {
 
+    @GetMapping("/tablice")
+    public String tablice(@RequestParam String[] strs) {
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < strs.length; ++i) {
+            sb.append(strs[i]);
+            if (i != strs.length - 1) {
+                sb.append(";");
+            }
+        }
+        return sb.toString();
+    }
+
+
     @GetMapping("/dodaj")
     public int dodaj(@RequestParam(required = false) Integer a,
                      @RequestParam(required = false) Integer b) {
